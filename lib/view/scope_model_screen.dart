@@ -7,6 +7,9 @@ import 'package:news_app/data/bean/now_playing_respo.dart';
 import 'package:news_app/model/movie_model.dart';
 import 'package:news_app/utils/apiutils/api_response.dart';
 import 'package:news_app/utils/widgethelper/widget_helper.dart';
+import 'package:news_app/view/discover/discover.dart';
+import 'package:news_app/view/feeds/feed.dart';
+import 'package:news_app/view/feeds/news_model.dart';
 import 'package:news_app/view/widget/row_movies_screen.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -58,7 +61,28 @@ class _ScopeModelScreenState extends State<ScopeModelScreen> {
           Icons.local_parking_rounded,
           color: ColorConst.BLACK_COLOR,
         ),
-        onPressed: () {});
+        onPressed: () {
+          List<Articles>art=new List();
+          Articles articles= new Articles();
+          articles.sourceName="authorgfhfhgf";
+          articles.author="fghgfgh";
+          articles.title="titlefghgfgh";
+          articles.description="descriptionfghgfgh";
+          articles.url="fghgfgh";
+          articles.urlToImage="urlToImagefghgfgh";
+          articles.publishedAt="publishedAtfghgfgh";
+          articles.content="contentfghgfgh";
+
+          art.add(articles);
+          art.add(articles);
+          art.add(articles);
+          art.add(articles);
+          art.add(articles);
+          art.add(articles);
+          art.add(articles);
+
+          navigationPush(context, FeedScreen(articalIndex: 0, articals: art,isFromSearch: true,));
+        });
     return WillPopScope(
         onWillPop: () {
           return onWillPop(context);

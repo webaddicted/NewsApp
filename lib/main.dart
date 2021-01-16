@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/constant/assets_const.dart';
 import 'package:news_app/constant/color_const.dart';
 import 'package:news_app/constant/string_const.dart';
+import 'package:news_app/view/home/home_screen.dart';
 import 'package:news_app/view/scope_model_screen.dart';
 
 void main() => runApp(MyApp());
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         accentColorBrightness: Brightness.light,
         primarySwatch: ColorConst.APP_COLOR,
       ),
-      home: ScopeModelScreen(),
+      home: HomeScreen(),
     );
   }
 }
